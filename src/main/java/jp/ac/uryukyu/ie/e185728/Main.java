@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("これからじゃんけんを始めます。");
         enemy opponent = new enemy("太郎", 38, "男性");
         opponent.printData();
-        System.out.println("これからじゃんけんを始めます。");
 
         while(true) {
             System.out.println("ぐー、ちょき、ぱーのいずれかを入力してください。");
@@ -28,9 +27,9 @@ public class Main {
                     throwHand = -1;
             }
 
-            int a = opponent.random();
-            int ooo = judge.result(throwHand, a);
-            if (ooo == 0) {
+            int opponentHand = opponent.random();
+            int result = judge.result(throwHand, opponentHand);
+            if (result == 0) {
                 continue;
             }
 
