@@ -6,7 +6,7 @@ public class judge {
      * 勝敗を決めるメソッド
      * @param one my hand
      * @param two opponent hand
-     * @return
+     * @return 0,1(勝ち、負け)
      */
     public static int result(int one, int two){
         int judgeGame = 0;

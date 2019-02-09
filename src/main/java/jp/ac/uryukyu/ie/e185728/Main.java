@@ -6,13 +6,13 @@ public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("これからじゃんけんを始めます。");
-        enemy opponent = new enemy("太郎", 38, "男性");
+        enemy opponent = new enemy("太郎", 38, "男性"); // 相手のプロフィール
         opponent.printData();
 
         while(true) {
             System.out.println("ぐー、ちょき、ぱーのいずれかを入力してください。");
             String input = sc.nextLine();
-            int throwHand;
+            int throwHand; // 自分の出す手
             switch (input) {
                 case "ぐー":
                     throwHand = 0;
@@ -27,8 +27,9 @@ public class Main {
                     throwHand = -1;
             }
 
-            int opponentHand = opponent.random();
+            int opponentHand = opponent.random(); // 相手の出す手
             int result = judge.result(throwHand, opponentHand);
+            // 引き分けの場合
             if (result == 0) {
                 continue;
             }
