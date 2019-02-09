@@ -20,6 +20,6 @@ public class enemy {
         return randomHand;
     }
     public void printData(){
-        System.out.println("初めまして,"+this.age+"歳"+this.gender+" "+this.name+"です。");
+        System.out.println("初めまして,"+this.age+"歳"+this.gender+"、対戦相手の"+this.name+"です。");
     }
 }
